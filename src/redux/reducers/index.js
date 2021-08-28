@@ -1,8 +1,9 @@
 import { combineReducers } from "redux";
-import { blogReducer } from "./blogReducer";
+import { blogReducer, selectedBlogReducer } from "./blogReducer";
 
 const reducers = combineReducers({
   allBlogs: blogReducer,
+  blog: selectedBlogReducer,
 });
 
 export default reducers;
