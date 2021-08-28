@@ -14,6 +14,13 @@ export const selectedBlog = (blog) => {
   };
 };
 
+export const setInput = (searchedBlogs) => {
+  return {
+    type: ActionTypes.SET_INPUT,
+    payload: searchedBlogs,
+  };
+};
+
 export const removeSelectedBlog = () => {
   return {
     type: ActionTypes.REMOVE_SELECTED_BLOG,

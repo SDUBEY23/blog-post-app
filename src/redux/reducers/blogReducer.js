@@ -13,6 +13,16 @@ export const blogReducer = (state = initialState, action) => {
   }
 };
 
+export const setInput = (state = initialState, action) => {
+  switch (action.type) {
+    case ActionTypes.SET_INPUT:
+      return { ...state, blogs: action.payload };
+
+    default:
+      return state;
+  }
+};
+
 export const selectedBlogReducer = (state = initialState, action) => {
   switch (action.type) {
     case ActionTypes.SELECTED_BLOG:
