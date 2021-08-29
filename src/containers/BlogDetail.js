@@ -10,7 +10,6 @@ const BlogDetail = () => {
   const { id, title, body } = blog;
   const { blogId } = useParams();
   const dispatch = useDispatch();
-  console.log(blog);
 
   const fetchBlogDetail = async () => {
     const response = await axios

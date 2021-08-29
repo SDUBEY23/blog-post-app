@@ -6,17 +6,15 @@ import "./blogComponent.css";
 const BlogComponent = () => {
   const blogs = useSelector((state) => state.allBlogs.blogs);
   const searchedBlogs = useSelector((state) => state.searchedBlogs.blogs);
-  console.log(searchedBlogs);
-  console.log(
-    blogs.filter((blog) => {
-      return blog.title.toLowerCase().includes(searchedBlogs);
-    })
-  );
   const renderBlogPosts = blogs
     .filter((blog) => {
       if (searchedBlogs === 0) {
         return blog;
-      } else if (blog.title.toLowerCase().includes(searchedBlogs)) {
+      } else if (
+        blog.title
+          .toLowerCase()
+          .includes(searchedBlogs.toString().toLowerCase())
+      ) {
         return blog;
       }
     })

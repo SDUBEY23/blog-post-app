@@ -20,7 +20,7 @@ const BlogList = () => {
   useEffect(() => {
     fetchBlogPosts();
   }, []);
-  console.log("Blogs:", blogs);
+
   return (
     <div className="blogList">
       <Header />
