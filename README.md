@@ -30,7 +30,8 @@ Once the app is compiled and bundled successfully you should see this screen in 
 
 ## Instructions
 
-1. Create App ( with CLI only ) and set up a state store (using a UI library is preferred but not mandatory) [ React: CRA & Redux ] Or [ Vue: VueCLI & Vuex ]. Make sure the integration API is handled with the store only.
+1. Create App ( with CLI only ) and set up a state store (using a UI library is preferred but not mandatory) [ React: CRA & Redux ] Or
+   [ Vue: VueCLI & Vuex ]. Make sure the integration API is handled with the store only.
 2. Create a Blog posts listing page.
 3. Setup a route for a single post page & make sure the blog name should be the page title.
 4. Create a button to load comments on a particular post page with this endpoint
