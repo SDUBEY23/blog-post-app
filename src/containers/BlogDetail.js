@@ -18,6 +18,7 @@ const BlogDetail = () => {
         console.log("Error", err);
       });
     dispatch(selectedBlog(response.data));
+    console.log(title);
   };
 
   useEffect(() => {
@@ -26,6 +27,8 @@ const BlogDetail = () => {
       dispatch(removeSelectedBlog());
     };
   }, [blogId]);
+  document.title = title;
+  console.log(title);
   return (
     <div className="detail">
       {Object.keys(blog).length === 0 ? (
