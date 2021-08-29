@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { selectedBlog, removeSelectedBlog } from "../redux/actions/blogActions";
+import "./blogDetail.css";
 
 const BlogDetail = () => {
   const blog = useSelector((state) => state.blog);
@@ -27,13 +28,15 @@ const BlogDetail = () => {
     };
   }, [blogId]);
   return (
-    <div className="ui grid container">
+    <div className="detail">
       {Object.keys(blog).length === 0 ? (
         <div>...Loading</div>
       ) : (
-        <div className="ui placeholder segment">
-          <div className="column rp">
+        <div className="detail__content">
+          <div className="detail__header">
             <h1>{title}</h1>
+          </div>
+          <div className="detail__context">
             <p>{body}</p>
           </div>
         </div>

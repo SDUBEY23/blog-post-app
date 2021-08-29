@@ -3,6 +3,8 @@ import axios from "axios";
 import { useSelector, useDispatch } from "react-redux";
 import { setBlogs } from "../redux/actions/blogActions";
 import BlogComponent from "./BlogComponent";
+import "./blogList.css";
+import Header from "./Header";
 
 const BlogList = () => {
   const blogs = useSelector((state) => state);
@@ -20,7 +22,8 @@ const BlogList = () => {
   }, []);
   console.log("Blogs:", blogs);
   return (
-    <div className="container grid">
+    <div className="blogList">
+      <Header />
       <BlogComponent />
     </div>
   );
